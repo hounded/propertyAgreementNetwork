@@ -24,6 +24,7 @@ IBM states that blockchain can enable enterprises to :
 * Lower transcation costs
 * Speed processes
 * Provide security and trust
+
 What if we were able to provide this distruptive technology to the area of law and effectivly provide a fast process for parties to come to an agreement with a lower cost in a way that was secure and trusted.
 For this hack we have used hyperledger composer the following details the files and the method of deployment for implementing this solution. 
 
