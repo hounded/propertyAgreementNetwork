@@ -1,0 +1,44 @@
+/**
+ * Write your model definitions here
+ */
+
+namespace io.property.agreement.network
+
+participant Vendor identified by id {
+  o String id
+}
+
+participant Purchaser identified by id {
+  o String id
+}
+
+asset Property identified by ct {
+  o String ct
+}
+
+asset PropertyListing identified by id {
+  o String id
+  o Double purchasePrice
+  o Double deposit
+}
+
+concept Agreement {
+  --> Purchaser purchaser
+  --> Vendor vendor
+  o Condition[] conditions
+  o FinancialCondition finCondition
+}
+
+concept Condition {
+  o String description
+  o Boolean agreed
+}
+
+concept FinancialCondition extends Condition {
+  
+}
+
+transaction ChangeAssetValue {
+  o String newValue
+  --> Asset relatedAsset
+}
