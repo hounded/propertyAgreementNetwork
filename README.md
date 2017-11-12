@@ -9,6 +9,7 @@ Law is an area where knowdelge is power. Understanding the intricacies and nuanc
 A good example of a standard process is property conveyencing. 
 * First an agreement is drawn up which parties agree upon. 
 * Then the titles are exchanged and the data updated.
+
 The io.property.agreement.network looks at the possibility of solving the first point. 
 
 ### Solutions 
