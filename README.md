@@ -12,7 +12,7 @@ A good example of a standard process is property conveyencing.
 
 The io.property.agreement.network looks at the possibility of solving the first point. 
 
-### Solutions 
+### Solutions for coming to an agreement
 A solution that encapusalted the full transaction of poperty conveyance is outside the scope of this project as it will require co-operation with the government in the country in which the conveyance is taking place.
 Some possible solutions to the completing the agreement are listed below 
 * Continue with parties going to their local lawyers to draw up an agreement. 
