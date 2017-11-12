@@ -4,12 +4,21 @@
 
 namespace io.property.agreement.network
 
-participant Vendor identified by id {
-  o String id
+enum AgreementState {
+  o PROPOSAL
+  o COUNTER
+  o AGREED
 }
 
-participant Purchaser identified by id {
-  o String id
+abstract participant User identified by email {
+  o String email
+  o String firstName
+  o String lastName
+}
+
+transaction MakeProposalTx {
+  --> User party
+  o Condition condition
 }
 
 asset Property identified by ct {
@@ -23,10 +32,9 @@ asset PropertyListing identified by id {
 }
 
 concept Agreement {
-  --> Purchaser purchaser
-  --> Vendor vendor
+  --> User purchaser
+  --> User vendor
   o Condition[] conditions
-  o FinancialCondition finCondition
 }
 
 concept Condition {
@@ -34,11 +42,3 @@ concept Condition {
   o Boolean agreed
 }
 
-concept FinancialCondition extends Condition {
-  
-}
-
-transaction ChangeAssetValue {
-  o String newValue
-  --> Asset relatedAsset
-}

@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "description": "Property agreement on blockchain",
   "scripts": {
+    "create": "composer archive create -t dir -n .",
+    "deploy": "",
     "test": "mocha --recursive"
   },
   "author": "BlockTeam",
@@ -18,5 +20,8 @@
     "istanbul": "latest",
     "mkdirp": "latest",
     "mocha": "latest"
+  },
+  "dependencies": {
+    "composer-cli": "^0.15.0"
   }
 }
