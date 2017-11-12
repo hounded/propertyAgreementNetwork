@@ -29,4 +29,4 @@ What if we were able to provide this distruptive technology to the area of law a
 For this hack we have used hyperledger composer. The following details the files and the method of deployment for implementing this solution. 
 
 ## Documents :
-* [CTO description and design](Resources/docs/cto.md)
+
