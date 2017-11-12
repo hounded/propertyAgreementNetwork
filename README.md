@@ -5,7 +5,7 @@ Team members
 * James Whiteman (NZ)
 
 ### The Problem 
-Law has become and area where knowdelge is power. Understanding the intricacies and nuances of many of the processes in law can take years of study. However once understood some processes can become just a matter of copy and paste. Because of the time required to understand the process and often the risk associated with the process it will be reflected in the cost of handling the process, even if the process once understood is simple. 
+Law is an area where knowdelge is power. Understanding the intricacies and nuances of many of the processes in law can take years of study. However once understood some processes can become just a matter of copy and paste. Because of the time required to understand the process and often the risk associated with the process it will be reflected in the cost of handling the process, even if the process once understood is simple. 
 A good example of a standard process is property conveyencing. 
 * First an agreement is drawn up which parties agree upon. 
 * Then the titles are exchanged and the data updated.
