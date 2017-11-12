@@ -21,17 +21,17 @@ participant Purchaser identified by id extends party {
 
 asset Property identified by ct {
   o String ct
-  o String Address
-  o String Estate
-  o String LegalDescription optional
-  o String Area 
-  o String LotFlatUnit
-  o String DP
+  o String address
+  o String estate
+  o String legalDescription optional
+  o String area 
+  o String lotFlatUnit
+  o String dp
 }
 
 concept PaymentPurchasePrice {
   --> Property property
-  o Boolean GstIncluded
+  o Boolean gstIncluded
   o Double purchasePrice
   o Double deposit
 }
@@ -50,12 +50,13 @@ asset Agreement identified by id {
 
 concept Condition {
   o String description
-  o Boolean agreed
+  o Boolean required
 }
 
 concept FinancialCondition extends Condition {
-  o Double amount
-  o String wordAmount
+  o String lender
+  o String amount
+  o String financeDate
 }
 
 enum AgreementState {
@@ -63,7 +64,6 @@ enum AgreementState {
   o COUNTER
   o AGREED
 }
-
 
 transaction Offer {
   o Double offer optional
