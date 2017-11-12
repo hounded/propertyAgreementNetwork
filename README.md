@@ -5,18 +5,18 @@ Team members
 * James Whiteman (NZ)
 
 ### The Problem 
-Law has become and area where knowdelge is power. Understanding the intricacies and nuances of many of the processes in law can take years of study. However once understood some processes can become just a matter of copy and paste. So while sometimes a process maybe simple once understood, it can still be very costly to access that knowdeldge. 
+Law has become and area where knowdelge is power. Understanding the intricacies and nuances of many of the processes in law can take years of study. However once understood some processes can become just a matter of copy and paste. So while sometimes a process may be simple once understood, it can still be very costly to access that knowdeldge. 
 A good example of this is property conveyencing. 
 * First an agreement is drawn up which parties agree upon. 
 * Then the titles are exchanged and the data updated.
 The io.property.agreement.network looks at the possibility of solving the first point. 
 
 ### Solutions 
-A solution that encapusalted the full transaction of poperty conveyance is outside the scope of this project as it will require co-operation with the government in the country in which the conveyance is taking place.
-Some possible solutions to the completing the agreement are listed below 
+A solution that encapsulates the full transaction of poperty conveyancing is outside the scope of this project as it will require co-operation with the government in the country in which the conveyance is taking place.
+Some possible solutions to completing the agreement are listed below 
 * Continue with parties going to their local lawyers to draw up an agreement. 
-* A full stack application that allows partys to come to an agreement.
-* A distributed ledger available via an application that tracks the steps take to reach an agreement.
+* A full stack application that allows parties to come to an agreement.
+* A distributed ledger available via an application that tracks the steps taken to reach an agreement.
 
 ### Proposed Solution Distributed ledger / Application for property agreement (Blockchain)
 IBM states that blockchain can enable enterprises to :

@@ -19,13 +19,19 @@ participant Purchaser identified by id extends party {
     o String id
 }
 
-asset Property identified by id {
-  --> PropertyListing propertyListing 
-  o String id
+asset Property identified by ct {
+  o String ct
+  o String Address
+  o String Estate
+  o String LegalDescription optional
+  o String Area 
+  o String LotFlatUnit
+  o String DP
 }
 
-asset PropertyListing identified by id {
-  o String id
+concept PaymentPurchasePrice {
+  --> Property property
+  o Boolean GstIncluded
   o Double purchasePrice
   o Double deposit
 }
@@ -33,6 +39,8 @@ asset PropertyListing identified by id {
 asset Agreement identified by id {
   o String id
   o Condition[] conditions
+  o FinancialCondition financialCondition
+  o PaymentPurchasePrice paymentPurchasePrice 
   o AgreementState status
   --> Purchaser purchaser
   --> Vendor vendor
@@ -56,9 +64,10 @@ enum AgreementState {
   o AGREED
 }
 
+
 transaction Offer {
-  o Double value optional
-  --> Agreement agreement
+  o Double offer optional
+    --> Agreement agreement
 }
 
 transaction SetupDemo {
