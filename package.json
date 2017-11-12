@@ -4,7 +4,13 @@
   "description": "Property agreement on blockchain",
   "scripts": {
     "create": "composer archive create -t dir -n .",
-    "deploy": "",
+    "install-runtime": "composer runtime install --card PeerAdmin@hlfv1 --businessNetworkName property-agreement-network",
+    "deploy": "composer network start --card PeerAdmin@hlfv1 --networkAdmin admin --networkAdminEnrollSecret adminpw --archiveFile property-agreement-network@0.0.1.bna --file networkadmin.card",
+    "import-admin": "composer card import --file networkadmin.card",
+    "ping": "composer network ping --card admin@tutorial-network",
+    "rest-server": "./node_modules/composer-rest-server/cli.js --card admin@property-agreement-network",
+    "update": "npm run create;composer network update --card admin@property-agreement-network -a property-agreement-network@0.0.1.bna",
+    "setup": "npm run create;npm run install-runtime;npm run deploy;npm run import-admin;npm run rest-server",
     "test": "mocha --recursive"
   },
   "author": "BlockTeam",
