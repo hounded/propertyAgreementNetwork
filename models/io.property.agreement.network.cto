@@ -4,29 +4,48 @@
 
 namespace io.property.agreement.network
 
-participant Vendor identified by id {
-  o String id
+abstract participant party  {
+  o String description
+  o String FirstName optional
+  o String LastName optional 
 }
 
-participant Purchaser identified by id {
+participant Vendor identified by id extends party {
   o String id
+  o Boolean gst 
+}
+
+participant Purchaser identified by id extends party {
+    o String id
 }
 
 asset Property identified by ct {
   o String ct
+  o String Address
+  o String Estate
+  o String LegalDescription optional
+  o String Area 
+  o String LotFlatUnit
+  o String DP
 }
 
-asset PropertyListing identified by id {
-  o String id
+concept PaymentPurchasePrice {
+  --> Property property
+  o Boolean GstIncluded
   o Double purchasePrice
   o Double deposit
 }
 
-concept Agreement {
+asset Agreement identified by id {
+  o String id
+  o Condition[] conditions
+  o FinancialCondition financialCondition
+  o PaymentPurchasePrice paymentPurchasePrice 
+  o AgreementState status
   --> Purchaser purchaser
   --> Vendor vendor
-  o Condition[] conditions
-  o FinancialCondition finCondition
+  --> Property property
+  
 }
 
 concept Condition {
@@ -35,10 +54,22 @@ concept Condition {
 }
 
 concept FinancialCondition extends Condition {
-  
+  o Double amount
+  o String wordAmount
 }
 
-transaction ChangeAssetValue {
-  o String newValue
-  --> Asset relatedAsset
+enum AgreementState {
+  o PROPOSAL
+  o COUNTER
+  o AGREED
+}
+
+
+transaction Offer {
+  o Double offer optional
+    --> Agreement agreement
+}
+
+transaction SetupDemo {
+
 }
