@@ -16,12 +16,14 @@ import { LoginModule } from './login/login.module';
 import {AgreementsModule} from './agreements/agreements.module';
 import {PropertiesModule} from "./properties/properties.module";
 import {SidebarComponent} from "./sidebar/sidebar.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     TranslateModule.forRoot(),
     CoreModule,
     NgbModule.forRoot(),
