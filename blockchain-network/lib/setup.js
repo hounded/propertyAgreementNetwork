@@ -65,6 +65,9 @@ function setupDemo(setupDemo) {
             var condition = factory.newConcept(NS,'Condition');
             var financialCondition = factory.newConcept(NS,'FinancialCondition');
             var paymentPurchasePrice = factory.newConcept(NS,'PaymentPurchasePrice')
+            var propertyRelation = factory.newRelationship(NS,'Property','1')
+            var purchaserRelation = factory.newRelationship(NS,'Purchaser','1')
+            var vendorRelation = factory.newRelationship(NS,'Vendor','1')
 
             condition.description = "Building report required";
             condition.required = true;
@@ -75,7 +78,7 @@ function setupDemo(setupDemo) {
             financialCondition.amount = "Sufficient to complete purchase";
             financialCondition.financeDate = "10 working days from the date of this Agreement";
 
-            paymentPurchasePrice.property = "resource:io.property.agreement.network.Property#1";
+            paymentPurchasePrice.property = propertyRelation;
             paymentPurchasePrice.gstIncluded = true;
             paymentPurchasePrice.purchasePrice = 30000.00;
             paymentPurchasePrice.deposit = 0;
@@ -84,13 +87,13 @@ function setupDemo(setupDemo) {
             agreement.financialCondition = financialCondition;
             agreement.paymentPurchasePrice = paymentPurchasePrice;
             agreement.status = "PROPOSAL";
-            agreement.purchaser = "resource:io.property.agreement.network.Purchaser#1";
-            agreement.vendor = "resource:io.property.agreement.network.Vendor#1";
-            agreement.property = "resource:io.property.agreement.network.Property#1";
+            agreement.purchaser = purchaserRelation;
+            agreement.vendor = vendorRelation;
+            agreement.property = propertyRelation;
             return agreementRegister.add(agreement);
         })
         .catch(function(error){
             console.log(error);
         });
-   
+
 }
