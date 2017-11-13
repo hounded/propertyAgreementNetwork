@@ -1,0 +1,76 @@
+/**
+ * Write your model definitions here
+ */
+
+namespace io.property.agreement.network
+
+enum AgreementState {
+  o PROPOSAL
+  o COUNTER
+  o AGREED
+}
+
+abstract participant party  identified by id{
+  o String id
+  o String description
+  o String FirstName optional
+  o String LastName optional 
+}
+
+participant Vendor extends party {
+  o Boolean gst 
+}
+
+participant Purchaser extends party {
+
+}
+
+asset Property identified by ct {
+  o String ct
+  o String address
+  o String estate
+  o String legalDescription optional
+  o String area 
+  o String lotFlatUnit
+  o String dp
+  --> Vendor owner
+}
+
+asset Agreement identified by id {
+  o String id
+  o Condition[] conditions
+  o FinancialCondition financialCondition
+  o PaymentPurchasePrice paymentPurchasePrice 
+  o AgreementState status
+  --> Purchaser purchaser
+  --> Vendor vendor
+  --> Property property
+}
+
+concept PaymentPurchasePrice {
+  --> Property property
+  o Boolean gstIncluded
+  o Double purchasePrice
+  o Double deposit
+}
+
+concept Condition {
+  o String description
+  o Boolean required
+}
+
+
+concept FinancialCondition extends Condition {
+  o String lender
+  o String amount
+  o String financeDate
+}
+
+transaction Offer {
+  o Double offer optional
+    --> Agreement agreement
+}
+
+transaction SetupDemo {
+
+}

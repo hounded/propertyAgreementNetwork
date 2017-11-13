@@ -1,0 +1,31 @@
+.action-group {
+  margin-bottom: 16px;
+}
+
+.card {
+  margin: 16px;
+  padding: 16px;
+}
+
+.property-image {
+  height: auto;
+  width: 100%;
+}
+
+
+.main-container {
+  margin-top: 66px;
+  margin-left: 235px;
+  padding: 15px;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .main-container {
+    margin-left: 0px !important;
+  }
+}

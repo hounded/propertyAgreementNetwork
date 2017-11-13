@@ -1,0 +1,84 @@
+<div class="container-fluid">
+  <app-sidebar></app-sidebar>
+
+  <div class="main-container">
+
+    <ng-template #content let-c="close" let-d="dismiss">
+      <div class="modal-header">
+        <h4 class="modal-title">List New Property</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">CT</span>
+          <input [(ngModel)]="listPropertyData.ct" type="text" class="form-control" placeholder="CT" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon2">Address</span>
+          <input [(ngModel)]="listPropertyData.address" type="text" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon3">Estate</span>
+          <input  [(ngModel)]="listPropertyData.estate" type="text" class="form-control" placeholder="Estate" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <br>
+
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon4">Legal Description</span>
+          <input [(ngModel)]="listPropertyData.legalDescription" type="text" class="form-control" placeholder="Legal Description" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <br>
+
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon5">Area</span>
+          <input [(ngModel)]="listPropertyData.area" type="text" class="form-control" placeholder="Area" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <br>
+
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon6">Lot Flat Unit</span>
+          <input [(ngModel)]="listPropertyData.lotFlatUnit" type="text" class="form-control" placeholder="Lot Flat Unit" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <br>
+
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon7">DP</span>
+          <input [(ngModel)]="listPropertyData.dp" type="text" class="form-control" placeholder="DP" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" (click)="c('CREATE')">Create</button>
+        <button type="button" class="btn btn-outline-primary" (click)="c('Close click')">Close</button>
+      </div>
+    </ng-template>
+
+    <div class="btn-group action-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-outline-primary" (click)="openListPropertyModal(content)">List New Property</button>
+    </div>
+
+    <hr>
+
+    <div *ngFor='let property of properties' class="card mb-3">
+      <div class="card-block">
+        <div class="row">
+          <div class="col-2">
+            <img class="card-img-right property-image" src="assets/home.png" alt="Card image cap">
+          </div>
+          <div class="col-10">
+            <h4 class="card-title">Property CT: {{property.ct}}</h4>
+            <span class="card-text">Address: {{ property.address }}</span> <br />
+            <span class="card-text">Estate: {{ property.estate }}</span>  <br />
+            <span class="card-text">Area: {{ property.area }}</span>
+            <p class="card-text"><small class="text-muted">Property flat unit: {{ property.lotFlatUnit }}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
