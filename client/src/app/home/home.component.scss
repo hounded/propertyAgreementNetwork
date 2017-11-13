@@ -1,0 +1,26 @@
+.logo {
+  width: 100px;
+}
+
+q {
+  font-style: italic;
+  font-size: 1.2rem;
+  quotes: "« " " »";
+}
+
+.main-container {
+  margin-top: 66px;
+  margin-left: 235px;
+  padding: 15px;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .main-container {
+    margin-left: 0px !important;
+  }
+}

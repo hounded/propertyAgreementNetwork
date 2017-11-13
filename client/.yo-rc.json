@@ -1,0 +1,17 @@
+{
+  "generator-ngx-rocket": {
+    "version": "2.3.0",
+    "props": {
+      "appName": "property-agreement-client",
+      "target": [
+        "web"
+      ],
+      "pwa": true,
+      "ui": "bootstrap",
+      "auth": true,
+      "projectName": "property-agreement-client",
+      "mobile": [],
+      "webview": []
+    }
+  }
+}
