@@ -75,6 +75,42 @@
             <span class="card-text">Estate: {{ property.estate }}</span>  <br />
             <span class="card-text">Area: {{ property.area }}</span>
             <p class="card-text"><small class="text-muted">Property flat unit: {{ property.lotFlatUnit }}</small></p>
+
+            <ng-template #agreement let-c="close" let-d="dismiss">
+              <div class="modal-header">
+                <h4 class="modal-title">Create Agreement</h4>
+                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic1">Price</span>
+                  <input [(ngModel)]="listPropertyData.ct" type="text" class="form-control" placeholder="Price" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <br>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic2">Deposit</span>
+                  <input [(ngModel)]="listPropertyData.address" type="text" class="form-control" placeholder="Deposit" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <br>
+
+                <span class="input-group-addon">
+                  <input type="checkbox" aria-label="Checkbox for following text input">
+                </span>
+                <label  class="form-control" > GST Included</label>
+
+                <br>
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" (click)="c('CREATE')">Create</button>
+                <button type="button" class="btn btn-outline-primary" (click)="c('Close click')">Close</button>
+              </div>
+            </ng-template>
+
+            <a class="btn btn-primary" (click)="openAgreementModal(agreement)">Start Agreement</a>
           </div>
         </div>
       </div>

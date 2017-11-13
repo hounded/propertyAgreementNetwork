@@ -5,12 +5,14 @@ import { AgreementsComponent } from './agreements.component';
 import { TimelineComponent } from '../timeline/timeline.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {SidebarModule} from '../sidebar/sidebar.module';
+import {AgreementsRoutingModule} from './agreements-routing.module';
 
 @NgModule({
   imports: [
     NgbModule,
     CommonModule,
-    SidebarModule
+    SidebarModule,
+    AgreementsRoutingModule,
   ],
   declarations: [
     AgreementsComponent,
