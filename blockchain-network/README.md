@@ -5,7 +5,7 @@ Team members
 * James Whiteman (NZ)
 
 ### The Problem 
-Law has become and area where knowdelge is power. Understanding the intricacies and nuances of many of the processes in law can take years of study. However once understood some processes can become just a matter of copy and paste. So while sometimes a process may be simple once understood, it can still be very costly to access that knowdeldge. 
+Law has become and area where knowledge is power. Understanding the intricacies and nuances of many of the processes in law can take years of study. However once understood some processes can become just a matter of copy and paste. So while sometimes a process may be simple once understood, it can still be very costly to access that knowledge. A good example of this is property conveyancing.
 A good example of this is property conveyencing. 
 * First an agreement is drawn up which parties agree upon. 
 * Then the titles are exchanged and the data updated.
