@@ -1,42 +1,20 @@
-<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-  <ngb-panel>
-    <ng-template ngbPanelTitle>
-      <div><b>Agreement for</b> property #1</div>
-      <div>Last updated: 14/11/2017</div>
-      <div>Status: PROPOSAL</div>
-    </ng-template>
-    <ng-template ngbPanelContent>
-      <app-timeline></app-timeline>
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel>
-    <ng-template ngbPanelTitle>
-      <div><b>Agreement for</b> property #2</div>
-      <div>Last updated:</div>
-      <div>Status:</div>
-    </ng-template>
-    <ng-template ngbPanelContent>
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-      labore sustainable VHS.
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel>
-    <ng-template ngbPanelTitle>
-      <div><b>Agreement for</b> property #3</div>
-      <div>Last updated:</div>
-      <div>Status:</div>
-    </ng-template>
-    <ng-template ngbPanelContent>
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-      labore sustainable VHS.
-    </ng-template>
-  </ngb-panel>
-</ngb-accordion>
+<div class="container-fluid">
+  <app-sidebar></app-sidebar>
+
+  <div class="main-container">
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+      <ngb-panel>
+        <ng-template ngbPanelTitle>
+          <div><b>Agreement for</b> property #1</div>
+          <div>Purchaser: James</div>
+          <div>Vendor: JSquared</div>
+          <div>Last updated: 14/11/2017</div>
+          <div>Status: PROPOSAL</div>
+        </ng-template>
+        <ng-template ngbPanelContent>
+          <app-timeline></app-timeline>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </div>
+</div>
