@@ -58,7 +58,6 @@ concept Condition {
   o Boolean required
 }
 
-
 concept FinancialCondition extends Condition {
   o String lender
   o String amount
@@ -66,8 +65,17 @@ concept FinancialCondition extends Condition {
 }
 
 transaction Offer {
-  o Double offer optional
+  o Double price optional
     --> Agreement agreement
+}
+
+transaction createAgreement  {
+  o String offerPrice
+  o String deposit
+  o String gstIncluded
+  --> Vendor vendor
+  --> Purchaser purchaser
+  --> Property property
 }
 
 transaction SetupDemo {
