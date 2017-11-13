@@ -7,12 +7,13 @@
     "install-runtime": "composer runtime install --card PeerAdmin@hlfv1 --businessNetworkName property-agreement-network",
     "deploy": "composer network start --card PeerAdmin@hlfv1 --networkAdmin admin --networkAdminEnrollSecret adminpw --archiveFile property-agreement-network@0.0.1.bna --file networkadmin.card",
     "import-admin": "composer card import --file networkadmin.card",
+    "issue-vendor-identity": "composer identity issue -c admin@property-agreement-network -f VendorIdentity.card -u JSquared -a resource:io.property.agreement.network.Vendor#1 -x false",
     "ping": "composer network ping --card admin@property-agreement-network",
-    "rest-server": "./node_modules/composer-rest-server/cli.js --card admin@property-agreement-network",
+    "rest-server": "./node_modules/composer-rest-server/cli.js --card admin@property-agreement-network -m true",
     "list": "composer network list -c admin@property-agreement-network",
-    "update": "npm run create;composer network update --card admin@property-agreement-network -a property-agreement-network@0.0.1.bna",
-    "setup":"composer transaction submit -c admin@property-agreement-network -d '{\"$class\":\"io.property.agreement.network.SetupDemo\"}'",
-    "setup-all": "npm run create;npm run install-runtime;npm run deploy;npm run import-admin;npm run rest-server",
+    "update": "npm run create;composer network update --card admin@property-agreement-network -a property-agreement-network@0.0.1.bna", 
+    "setup": "composer transaction submit -c admin@property-agreement-network -d '{\"$class\":\"io.property.agreement.network.SetupDemo\"}'",
+    "setup-all": "npm run create;npm run install-runtime;npm run deploy;npm run import-admin;npm run setup;npm run rest-server",
     "test": "mocha --recursive"
   },
   "author": "BlockTeam",
@@ -30,6 +31,8 @@
     "mocha": "latest"
   },
   "dependencies": {
-    "composer-cli": "^0.15.0"
+    "composer-cli": "^0.15.0",
+    "cross-env": "^5.1.1",
+    "passport-github": "^1.1.0"
   }
 }

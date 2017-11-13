@@ -33,6 +33,7 @@ asset Property identified by ct {
   o String area 
   o String lotFlatUnit
   o String dp
+  --> Vendor owner
 }
 
 asset Agreement identified by id {
