@@ -1,9 +1,9 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
   <ul class="list-group">
-    <a routerLink="/home/agreements" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <a [routerLink]='["/agreements"]' [routerLinkActive]="['router-link-active']" class="list-group-item">
       <i class="fa fa-fw fa-shield"></i>&nbsp;{{ 'Agreements' | translate }}
     </a>
-    <a routerLink="/home/properties" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <a routerLink="/properties" [routerLinkActive]="['router-link-active']" class="list-group-item">
       <i class="fa fa-fw fa-home"></i>&nbsp;{{ 'Properties' | translate }}
     </a>
     <!--<a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">-->

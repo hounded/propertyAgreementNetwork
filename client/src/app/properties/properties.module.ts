@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AgreementsComponent } from './agreements.component';
-import { TimelineComponent } from '../timeline/timeline.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {PropertiesComponent} from './properties.component';
 import {SidebarModule} from '../sidebar/sidebar.module';
+import {PropertiesRoutingModule} from "./properties-routing.module";
 
 @NgModule({
   imports: [
     NgbModule,
     CommonModule,
-    SidebarModule
+    SidebarModule,
+    PropertiesRoutingModule
   ],
   declarations: [
-    AgreementsComponent,
-    TimelineComponent
-
+    PropertiesComponent,
   ]
 })
-export class AgreementsModule { }
+export class PropertiesModule { }

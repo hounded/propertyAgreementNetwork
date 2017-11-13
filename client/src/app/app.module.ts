@@ -14,7 +14,8 @@ import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
 import { LoginModule } from './login/login.module';
 import {AgreementsModule} from './agreements/agreements.module';
-import { PropertiesComponent } from './properties/properties.component';
+import {PropertiesModule} from "./properties/properties.module";
+import {SidebarComponent} from "./sidebar/sidebar.component";
 
 @NgModule({
   imports: [
@@ -29,9 +30,10 @@ import { PropertiesComponent } from './properties/properties.component';
     AboutModule,
     LoginModule,
     AgreementsModule,
+    PropertiesModule,
     AppRoutingModule
   ],
-  declarations: [AppComponent, PropertiesComponent],
+  declarations: [AppComponent],
   providers: [
   ],
   bootstrap: [AppComponent]

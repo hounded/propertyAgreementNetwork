@@ -2,3 +2,4 @@ node_modules/
 composer-logs/
 *.bna
 .DS_STORE
+composer-data/
