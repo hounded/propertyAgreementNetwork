@@ -1,3 +1,3 @@
-[submodule "appollo-universal-starter-kit"]
-	path = appollo-universal-starter-kit
+[submodule "apollo-universal-starter-kit"]
+	path = apollo-universal-starter-kit
 	url = https://github.com/sysgears/apollo-universal-starter-kit.git
