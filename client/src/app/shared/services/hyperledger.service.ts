@@ -4,7 +4,7 @@ import { HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class HyperledgerService {
-  private accessToken = 'I1IKhUIiK4Kr5oGehuJjFbnW3jiG9DjM5RmJ5D6zlPYunWEDJZVlYGYjXTnAHy9F';
+  private accessToken = 'oR2kEgt9LxbiN6BG29LwmhWQ4wau7BCOfLoSgpVMZSCqyTCI4JZb6DQlchWn4Fco';
   private restServerUrl = 'http://localhost:3000/api/';
 
   constructor(private http: HttpClient) {}

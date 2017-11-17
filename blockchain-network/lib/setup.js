@@ -50,11 +50,13 @@ function setupDemo(setupDemo) {
         })
         .then(function(propertyRegister){
             var property = factory.newResource(NS,'Property','1');
+            var vendorRelation = factory.newRelationship(NS,'Vendor','1')
             property.address = "128A Campbell Street, Whanganui";
             property.estate ="FEE SIMPLE";
             property.lotFlatUnit = "Lot 2";
             property.area = "362m2";
             property.dp = "477028";
+            property.owner = vendorRelation;
             return propertyRegister.add(property);
         })
         .then(function(){
