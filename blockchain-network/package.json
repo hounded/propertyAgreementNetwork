@@ -1,12 +1,20 @@
 {
   "name": "property-agreement-network",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Property agreement on blockchain",
   "scripts": {
     "create": "composer archive create -t dir -n .",
-    "install-runtime": "composer runtime install --card PeerAdmin@hlfv1 --businessNetworkName property-agreement-network",
-    "deploy": "composer network start --card PeerAdmin@hlfv1 --networkAdmin admin --networkAdminEnrollSecret adminpw --archiveFile property-agreement-network@0.0.1.bna --file networkadmin.card",
-    "import-admin": "composer card import --file networkadmin.card",
+    "create-admin-card": "composer card create -p connection.json -u PeerAdmin -c ~/fabric-tools/fabric-scripts/hlfv1/composer/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem -k ~/fabric-tools/fabric-scripts/hlfv1/composer/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/114aab0e76bf0c78308f89efc4b8c9423e31568da0c340ca187a9b17aa9a4457_sk -r PeerAdmin -r ChannelAdmin",
+    "import-admin-card": "composer card import -f PeerAdmin@fabric-network.card",
+    "install-runtime": "composer runtime install -c PeerAdmin@fabric-network -n property-agreement-network",
+    "start-bna": "composer network start -c PeerAdmin@fabric-network -a property-agreement-network@0.1.1.bna -A admin -S adminpw",
+    "import-bna-admin": "composer card import -f admin@property-agreement-network.card",
+    "ping-bna": "composer network ping -c admin@property-agreement-network",
+
+    "fabric-stop":"$HOME/fabric-tools/stopFabric.sh",
+    "fabric-start":"$HOME/fabric-tools/startFabric.sh",
+    "fabric-teardown":"$HOME/fabric-tools/teardownFabric.sh",
+
     "clear-admin-cards": "rm -rf ~/.composer/cards/admin@property-agreement-network; rm -rf ~/.composer/client-data/admin@property-agreement-network",
     "issue-vendor-identity": "composer identity issue -c admin@property-agreement-network -f VendorIdentity.card -u JSquared -a resource:io.property.agreement.network.Vendor#1 -x false",
     "issue-purchaser-identity": "composer identity issue -c admin@property-agreement-network -f PurchaserIdentity.card -u James -a resource:io.property.agreement.network.Purchaser#1 -x false",
@@ -22,18 +30,18 @@
   "email": "bteam@gmail.com",
   "license": "Apache-2.0",
   "devDependencies": {
-    "composer-admin": "latest",
-    "composer-client": "latest",
-    "composer-connector-embedded": "latest",
     "browserfs": "latest",
     "chai": "latest",
+    "composer-admin": "^0.15.1",
+    "composer-client": "^0.15.1",
+    "composer-connector-embedded": "^0.15.1",
     "eslint": "latest",
     "istanbul": "latest",
     "mkdirp": "latest",
     "mocha": "latest"
   },
   "dependencies": {
-    "composer-cli": "^0.15.0",
+    "composer-cli": "^0.15.1",
     "cross-env": "^5.1.1",
     "passport-github": "^1.1.0"
   }
