@@ -1,8 +1,9 @@
+# Branch React
+This branch is a continuation of the original hack. Using a react front end. This branch is currently only being worked on by 
+* James Whiteman
+
 # io.property.agreement.network
-io.property.agreement.network is a hyperledger composer solution for Proffer Blockchain Hackathon.
-Team members 
-* Antreas Pogiatzis (UK)
-* James Whiteman (NZ)
+io.property.agreement.network is a hyperledger composer solution 
 
 ### The Problem 
 Law has become an area where knowledge is power. Understanding the intricacies and nuances of many of the processes in law can take years of study. However once understood some processes can become just a matter of copy and paste. So while sometimes a process may be simple once understood, it can still be very costly to access that knowledge. A good example of this is property conveyancing.
