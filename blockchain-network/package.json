@@ -2,14 +2,15 @@
   "name": "property-agreement-network",
   "version": "0.1.1",
   "description": "Property agreement on blockchain",
+
   "scripts": {
     "create": "composer archive create -t dir -n .",
     "create-admin-card": "composer card create -p connection.json -u PeerAdmin -c ~/fabric-tools/fabric-scripts/hlfv1/composer/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem -k ~/fabric-tools/fabric-scripts/hlfv1/composer/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/114aab0e76bf0c78308f89efc4b8c9423e31568da0c340ca187a9b17aa9a4457_sk -r PeerAdmin -r ChannelAdmin",
     "import-admin-card": "composer card import -f PeerAdmin@fabric-network.card",
-    "install-runtime": "composer runtime install -c PeerAdmin@fabric-network -n property-agreement-network",
-    "start-bna": "composer network start -c PeerAdmin@fabric-network -a property-agreement-network@0.1.1.bna -A admin -S adminpw",
-    "import-bna-admin": "composer card import -f admin@property-agreement-network.card",
-    "ping-bna": "composer network ping -c admin@property-agreement-network",
+    "install-runtime": "composer runtime install -c PeerAdmin@fabric-network -n $npm_package_name",
+    "start-bna": "composer network start -c PeerAdmin@fabric-network -a $npm_package_name@$npm_package_version.bna -A admin -S adminpw",
+    "import-bna-admin": "composer card import -f admin@$npm_package_name.card",
+    "ping-bna": "composer network ping -c admin@$npm_package_name",
 
     "fabric-stop":"$HOME/fabric-tools/stopFabric.sh",
     "fabric-start":"$HOME/fabric-tools/startFabric.sh",
